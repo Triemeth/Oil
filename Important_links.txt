@@ -1,0 +1,11 @@
+Oil data for any given day:
+	https://fred.stlouisfed.org/series/DCOILBRENTEU
+
+Data dictionary NOAA:
+	https://coast.noaa.gov/data/marinecadastre/ais/data-dictionary.pdf
+
+All maritime data for 2024 by day:
+	https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2024/index.html
+
+Vessel traffic home page
+	https://hub.marinecadastre.gov/pages/vesseltraffic
