@@ -1,8 +1,10 @@
+import json
 
 if __name__ == "__main__":
 
-    month_count = 0
-    day_count = 0
+    start_string = "https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2024/"
+
+    dat = { "url_list": []}
 
     months_30_days = [4, 6, 9, 11]
 
@@ -17,17 +19,13 @@ if __name__ == "__main__":
 
         for j in range(1, j_range + 1):
             if j < 10 and i < 10:
-                print(f"AIS_2024_0{i}_0{j}")
+                dat["url_list"].append(f"{start_string}AIS_2024_0{i}_0{j}.zip")
             elif j < 10 and i >= 10:
-                print(f"AIS_2024_{i}_0{j}")
+                dat["url_list"].append(f"{start_string}AIS_2024_{i}_0{j}.zip")
             elif j >= 10 and i < 10:
-                print(f"AIS_2024_0{i}_{j}")
+                dat["url_list"].append(f"{start_string}AIS_2024_0{i}_{j}.zip")
             else:
-                print(f"AIS_2024_{i}_{j}")
+                dat["url_list"].append(f"{start_string}AIS_2024_{i}_{j}.zip")
 
-            day_count = day_count + 1
-
-        month_count = month_count + 1
-        
-    print("Day count:", day_count)
-    print("Month count:", month_count)
+    with open("early_data_test/url.json", "w") as json_file:
+        json.dump(dat, json_file, indent=4)
