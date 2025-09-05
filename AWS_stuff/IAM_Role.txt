@@ -1,5 +1,0 @@
-USER:
-    Polices:
-        Full Access Lambda
-        Full Access s3
-        Full Access step functions
