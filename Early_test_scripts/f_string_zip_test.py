@@ -27,5 +27,5 @@ if __name__ == "__main__":
             else:
                 dat["url_list"].append(f"{start_string}AIS_2024_{i}_{j}.zip")
 
-    with open("early_data_test/url.json", "w") as json_file:
+    with open("../arly_data_test/url.json", "w") as json_file:
         json.dump(dat, json_file, indent=4)
