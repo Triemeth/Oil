@@ -1,8 +1,8 @@
 import pandas as pd
 
 def read_data():
-    ais_data = pd.read_csv("early_data_test/short_data_2024_01_02.csv")
-    oil_price = pd.read_csv("early_data_test/DCOILBRENTEU.csv")
+    ais_data = pd.read_csv("../Early_data_test/short_data_2024_01_02.csv")
+    oil_price = pd.read_csv("../Early_data_test/DCOILBRENTEU.csv")
 
     oil_price = oil_price.rename(columns={'DCOILBRENTEU': 'oil_price', 'observation_date': 'date'}) 
     oil_price = oil_price.to_dict(orient='index')
