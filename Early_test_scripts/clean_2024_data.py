@@ -27,7 +27,7 @@ def get_only_oil_data(ais_data):
 if __name__ == "__main__":
     ais_data, oil_price = read_data()
 
-    cols_to_drop_AIS = ["MMSI", "VesselName", "CallSign", "TransceiverClass", "IMO"]
+    cols_to_drop_AIS = ["Unnamed: 0", "MMSI", "VesselName", "CallSign", "TransceiverClass", "IMO"]
     prepped_ais_data = prep_AIS(ais_data, cols_to_drop_AIS)
 
     oil_dict = {pd.to_datetime(v['date']): v['oil_price'] for v in oil_price.values()}
@@ -36,4 +36,4 @@ if __name__ == "__main__":
 
     oil_ships = get_only_oil_data(prepped_ais_data)
 
-    oil_ships.to_csv("early_data_test/oil_ships.csv")
+    oil_ships.to_csv("../Early_data_test/oil_ships.csv")
